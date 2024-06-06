@@ -1,5 +1,6 @@
 import 'package:barista/Pages/LandPage.dart';
 import 'package:barista/Pages/homepage.dart';
+import 'package:barista/Pages/mappage.dart';
 import 'package:barista/Pages/orderpage.dart';
 import 'package:barista/Widgets/ContainerBox.dart';
 import 'package:barista/Widgets/DetailContainer.dart';
@@ -187,6 +188,10 @@ class DetailPage extends StatelessWidget {
                             fontFamily: 'Sora',
                           ),
                         ),
+                        Text(
+
+                          ' Read More',
+                        ),
                         SizedBox(height: 20),
                         Text(
                           'Size',
@@ -313,7 +318,12 @@ class DetailPage extends StatelessWidget {
                     fweight: '600',
                     icon: null,
                     radius: 16,
-                    onTap: () {},
+                    onTap: () {
+
+
+                       
+                            
+                    },
                     border: border,
                   ),
                 ],
