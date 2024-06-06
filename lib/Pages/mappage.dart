@@ -1,6 +1,8 @@
+import 'package:barista/Pages/orderpage.dart';
 import 'package:barista/Widgets/ButtonIcon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 
 class MapPage extends StatelessWidget {
   final Color border = Color.fromRGBO(234, 234, 234, 1);
@@ -22,11 +24,48 @@ class MapPage extends StatelessWidget {
   final double bottomBarPadding = 20.0;
   final double containerWidth = 350.0; // Editable width of the container
   final double containerHeight = 107.0; // Editable height of the container
+  final double fabSize = 24.0; // Editable size of the floating action button
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 16.0),
+            child: FloatingActionButton(
+                backgroundColor: body,
+              onPressed: () {
+                 Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => OrderPage()),
+                    );
+              },
+              child: SvgPicture.asset(
+                'Assets/Icons/leftarrow.svg', // Adjust with your SVG path
+                width: fabSize,
+                height: fabSize,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(right: 40.0),
+            child: FloatingActionButton(
+              backgroundColor: body,
+              onPressed: () {
+                
+              },
+              child: SvgPicture.asset(
+                'Assets/Icons/gps.svg', // Adjust with your SVG path
+                width: fabSize,
+                height: fabSize,
+              ),
+            ),
+          ),
+        ],
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.startTop,
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
@@ -59,7 +98,7 @@ class MapPage extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: 5,),
-                 Text(
+                Text(
                   'Delivery to Jl. Kpg Sutoyo',
                   style: TextStyle(
                     color: Colors.black,
@@ -71,29 +110,21 @@ class MapPage extends StatelessWidget {
                 SizedBox(height: 10), // Space between text and SVG
                 Row(
                   children: [
-                     SizedBox(width: 15),
+                    SizedBox(width: 15),
                     SvgPicture.asset(
                       'Assets/Icons/green.svg', // Adjust with your SVG path
-                      // width: 100, // Adjust width as needed
-                      // height: 100, // Adjust height as needed
                     ),
                     SizedBox(width: 10),
                     SvgPicture.asset(
                       'Assets/Icons/green.svg', // Adjust with your SVG path
-                      // width: 100, // Adjust width as needed
-                      // height: 100, // Adjust height as needed
                     ),
-                     SizedBox(width: 10),
+                    SizedBox(width: 10),
                     SvgPicture.asset(
                       'Assets/Icons/green.svg', // Adjust with your SVG path
-                      // width: 100, // Adjust width as needed
-                      // height: 100, // Adjust height as needed
                     ),
-                     SizedBox(width: 10),
+                    SizedBox(width: 10),
                     SvgPicture.asset(
                       'Assets/Icons/white.svg', // Adjust with your SVG path
-                      // width: 100, // Adjust width as needed
-                      // height: 100, // Adjust height as needed
                     ),
                   ],
                 ),
@@ -168,8 +199,7 @@ class MapPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       image: DecorationImage(
-                        image: AssetImage
-('Assets/Images/Image.png'), // Replace with your image path
+                        image: AssetImage('Assets/Images/Image.png'), // Replace with your image path
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -196,6 +226,7 @@ class MapPage extends StatelessWidget {
                               SizedBox(height: 4), // Adding space between header and description
                               Text(
                                 'Personal Courier',
+
                                 style: TextStyle(
                                   color: txt,
                                   fontSize: 14,
@@ -203,6 +234,8 @@ class MapPage extends StatelessWidget {
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),
+
+
                             ],
                           ),
                         ),

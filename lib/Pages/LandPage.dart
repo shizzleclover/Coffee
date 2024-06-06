@@ -1,4 +1,5 @@
 import 'package:barista/Pages/details.dart';
+import 'package:barista/Pages/mappage.dart';
 import 'package:barista/Pages/orderpage.dart';
 import 'package:barista/Widgets/ContainerBox.dart';
 import 'package:barista/Widgets/Containerl%20copy.dart';
@@ -37,47 +38,13 @@ class LandPage extends StatelessWidget {
     );
 
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: Size.fromHeight(400.0),
-        child: Stack(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                gradient: gradient,
-              ),
-              height: 400.0,
-            ),
-            Positioned(
-              top: 300.0,
-              left: 0,
-              right: 0,
-              child: Center(
-                child: ResizableImageContainer(
-                  width: 400,
-                  height: 200,
-                ),
-              ),
-            ),
-          ],
-        ),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+
+         backgroundColor: button2,
       ),
-      body: Center(
-        child: AppButton(
-          backgroundColor: M,
-          text: 'M',
-          width: 124,
-          height: 65,
-          textColor: Colors.black,
-          fsize: 14,
-          ffamily: 'Sora-Regular',
-          fweight: '400',
-          icon: null,
-          radius: 12,
-          onTap: () {},
-          border: bordM,
-        ),
-      ),
-      bottomNavigationBar: ClipRRect(
+           
+       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(20.0),
           topRight: Radius.circular(20.0),
@@ -128,7 +95,10 @@ class LandPage extends StatelessWidget {
                     'Assets/Icons/bell.svg',
                   ),
                   onPressed: () {
-                    // Add functionality for bell button
+                     Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MapPage()),
+                    );
                   },
                 ),
               ],

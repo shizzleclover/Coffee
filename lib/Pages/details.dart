@@ -321,7 +321,10 @@ class DetailPage extends StatelessWidget {
                     onTap: () {
 
 
-                       
+ Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => OrderPage()),
+                    );                       
                             
                     },
                     border: border,
