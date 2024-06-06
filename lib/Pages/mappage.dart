@@ -18,13 +18,13 @@ class MapPage extends StatelessWidget {
   final Color bottombord = Color.fromRGBO(241, 241, 241, 1);
   final Color back = Color.fromRGBO(240, 240, 240, 1);
   final double lineWidth = 20.0;
-  final double buttonSpacing = 16.0; // Editable space between buttons and text
+  final double buttonSpacing = 16.0;  
   final double textPadding = 8.0; // Padding for text to align with image
   final double bottomBarHeight = 370.0; // Editable height of the bottom bar
   final double bottomBarPadding = 20.0;
   final double containerWidth = 350.0; // Editable width of the container
   final double containerHeight = 107.0; // Editable height of the container
-  final double fabSize = 24.0; // Editable size of the floating action button
+  final double fabSize = 24.0;  
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class MapPage extends StatelessWidget {
                     );
               },
               child: SvgPicture.asset(
-                'Assets/Icons/leftarrow.svg', // Adjust with your SVG path
+                'Assets/Icons/leftarrow.svg',  
                 width: fabSize,
                 height: fabSize,
               ),

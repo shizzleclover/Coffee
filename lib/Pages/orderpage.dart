@@ -202,25 +202,25 @@ class OrderPage extends StatelessWidget {
                         'Payment Summary',
                         style: TextStyle(
                           fontSize: 25,
-                          // fontWeight: FontWeight.w700,
+                        
                           fontFamily: 'Sora',
                         ),
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Price                                                      \$4.50',
+                        'Price                                           \$4.50',
                         style: TextStyle(
                           fontSize: 20,
-                          // fontWeight: FontWeight.w700,
+                           
                           fontFamily: 'Sora',
                         ),
                       ),
                       SizedBox(height: 10),
                       Text(
-                        'Delivery Fee                                      \$2.0',
+                        'Delivery Fee                            \$2.0',
                         style: TextStyle(
                           fontSize: 20,
-                          // fontWeight: FontWeight.w700,
+                          
                           fontFamily: 'Sora',
                         ),
                       ),
@@ -228,10 +228,10 @@ class OrderPage extends StatelessWidget {
                       Divider(thickness: 5, color: border),
                       SizedBox(height: 10),
                       Text(
-                        'Total Payment                                  \$5.53',
+                        'Total Payment                         \$5.53',
                         style: TextStyle(
                           fontSize: 20,
-                          // fontWeight: FontWeight.w700,
+                          
                           fontFamily: 'Sora',
                         ),
                       ),
