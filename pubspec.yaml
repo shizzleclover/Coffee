@@ -66,14 +66,21 @@ flutter:
     - Assets/Images/maps.png
     - Assets/Images/profile.png
     - Assets/Images/coffee.png
+    - Assets/Images/capframe.png
+    - Assets/Images/discount.png
 
     - Assets/Icons/GoogleLogo.svg
     - Assets/Icons/Hea.svg
+    - Assets/Icons/roast.svg
+    - Assets/Icons/money.svg
     - Assets/Icons/edit.svg
     - Assets/Icons/note.svg
     - Assets/Icons/star.svg
     - Assets/Icons/bean.svg
     - Assets/Icons/milk.svg
+    - Assets/Icons/beanC.svg
+    - Assets/Icons/milkC.svg
+    - Assets/Icons/milkD.svg
     - Assets/Icons/searchfilter.svg
     - Assets/Icons/homeh.svg
     - Assets/Icons/bell.svg
@@ -102,6 +109,7 @@ flutter:
         - asset: fonts/Sora-Regular.ttf
         - asset: fonts/Sora-Light.ttf
         - asset: fonts/Roboto-Regular.ttf
+        - asset: fonts/Sora-Medium.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

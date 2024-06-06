@@ -13,6 +13,17 @@ class HomePage extends StatelessWidget {
     Color textColor = Color.fromRGBO(0, 0, 0, 0.54);
     Color text = Color.fromRGBO(255, 255, 255, 1);
     Color buttontext = Color.fromRGBO(0, 0, 0, 0.54);
+     Color border = Color.fromRGBO(234, 234, 234, 1);
+    Color body = Color.fromRGBO(249, 249, 249, 1);
+    Color text3 = Color.fromRGBO(155, 155, 155, 1);
+    Color button = Color.fromRGBO(255, 240, 240, 1);
+    Color M = Color.fromRGBO(255, 245, 238, 1);
+    Color bor = Color.fromRGBO(222, 222, 222, 1);
+    Color bordM = Color.fromRGBO(198, 124, 78, 1);
+    Color text2 = Color.fromRGBO(255, 255, 255, 1);
+    Color button2 = Color.fromRGBO(198, 124, 78, 1);
+    Color bottombord = Color.fromRGBO(241, 241, 241, 1);
+    double lineWidth = 20.0;
     
     double blackSpaceHeight = 370.0;
 

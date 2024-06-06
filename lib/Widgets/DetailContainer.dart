@@ -1,30 +1,23 @@
 import 'package:flutter/material.dart';
 
-
-class SpecialContainer extends StatefulWidget {
+class ImageContainer extends StatefulWidget {
   final double width;
-   
   final double height;
-  // final Widget child;
 
-
-  const SpecialContainer({
+  const ImageContainer({
     Key? key,
     required this.width,
     required this.height,
-    //  required this.child, 
-
   }) : super(key: key);
 
   @override
-  State<SpecialContainer> createState() => _SpecialContainerState();
+  State<ImageContainer> createState() =>
+      _ResizableImageContainerState();
 }
 
-class _SpecialContainerState extends State<SpecialContainer> {
+class _ResizableImageContainerState extends State<ImageContainer> {
   double _width = 0;
   double _height = 0;
-  
-
 
   @override
   void initState() {
@@ -62,7 +55,7 @@ class _SpecialContainerState extends State<SpecialContainer> {
             fit: BoxFit.cover,
           ),
         ),
-        // child: widget.child,
+       
       ),
     );
   }
