@@ -3,7 +3,6 @@ import 'package:barista/Widgets/ButtonIcon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
 class MapPage extends StatelessWidget {
   final Color border = Color.fromRGBO(234, 234, 234, 1);
   final Color txt = Color.fromRGBO(128, 128, 128, 1);
@@ -18,13 +17,13 @@ class MapPage extends StatelessWidget {
   final Color bottombord = Color.fromRGBO(241, 241, 241, 1);
   final Color back = Color.fromRGBO(240, 240, 240, 1);
   final double lineWidth = 20.0;
-  final double buttonSpacing = 16.0;  
+  final double buttonSpacing = 16.0;
   final double textPadding = 8.0; // Padding for text to align with image
-  final double bottomBarHeight = 370.0; // Editable height of the bottom bar
+  final double bottomBarHeight = 358.0; // Editable height of the bottom bar
   final double bottomBarPadding = 20.0;
   final double containerWidth = 350.0; // Editable width of the container
   final double containerHeight = 107.0; // Editable height of the container
-  final double fabSize = 24.0;  
+  final double fabSize = 24.0;
 
   @override
   Widget build(BuildContext context) {
@@ -35,15 +34,15 @@ class MapPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 16.0),
             child: FloatingActionButton(
-                backgroundColor: body,
+              backgroundColor: body,
               onPressed: () {
-                 Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => OrderPage()),
-                    );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => OrderPage()),
+                );
               },
               child: SvgPicture.asset(
-                'Assets/Icons/leftarrow.svg',  
+                'Assets/Icons/leftarrow.svg',
                 width: fabSize,
                 height: fabSize,
               ),
@@ -53,9 +52,7 @@ class MapPage extends StatelessWidget {
             padding: const EdgeInsets.only(right: 40.0),
             child: FloatingActionButton(
               backgroundColor: body,
-              onPressed: () {
-                
-              },
+              onPressed: () {},
               child: SvgPicture.asset(
                 'Assets/Icons/gps.svg', // Adjust with your SVG path
                 width: fabSize,
@@ -88,6 +85,12 @@ class MapPage extends StatelessWidget {
           children: [
             Column(
               children: [
+                SvgPicture.asset(
+                  'Assets/Icons/Indicator.svg', // Replace with your SVG path
+                 
+                  
+                ),
+                SizedBox(height: 10), // Space between SVG and text
                 Text(
                   '10 minutes left',
                   style: TextStyle(
@@ -97,7 +100,7 @@ class MapPage extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                 ),
-                SizedBox(height: 5,),
+                SizedBox(height: 5),
                 Text(
                   'Delivery to Jl. Kpg Sutoyo',
                   style: TextStyle(
@@ -109,8 +112,8 @@ class MapPage extends StatelessWidget {
                 ),
                 SizedBox(height: 10), // Space between text and SVG
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center, // Center the row
                   children: [
-                    SizedBox(width: 15),
                     SvgPicture.asset(
                       'Assets/Icons/green.svg', // Adjust with your SVG path
                     ),
@@ -182,7 +185,6 @@ class MapPage extends StatelessWidget {
                 ),
               ),
             ),
-            // SizedBox(height: 0), // Space between "Delivered your order" container and second container
             Container(
               width: containerWidth,
               height: containerHeight,
@@ -226,7 +228,6 @@ class MapPage extends StatelessWidget {
                               SizedBox(height: 4), // Adding space between header and description
                               Text(
                                 'Personal Courier',
-
                                 style: TextStyle(
                                   color: txt,
                                   fontSize: 14,
@@ -234,8 +235,6 @@ class MapPage extends StatelessWidget {
                                   fontWeight: FontWeight.w400,
                                 ),
                               ),
-
-
                             ],
                           ),
                         ),

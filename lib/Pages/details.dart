@@ -64,7 +64,7 @@ class DetailPage extends StatelessWidget {
                       'Detail',
                       style: TextStyle(
                         fontFamily: 'Sora',
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w800,
                         fontSize: 18.0,
                       ),
                     ),

@@ -64,6 +64,7 @@ flutter:
   assets:
     - Assets/Images/homebackground.png
     - Assets/Images/maps.png
+    - Assets/Images/home.png
     - Assets/Images/Image.png
     - Assets/Images/profile.png
     - Assets/Images/coffee.png
@@ -72,6 +73,11 @@ flutter:
 
     - Assets/Icons/GoogleLogo.svg
     - Assets/Icons/Hea.svg
+    - Assets/Icons/Indicator.svg
+    - Assets/Icons/search.svg
+    - Assets/Icons/filter.svg
+    - Assets/Icons/prop.svg
+    - Assets/Icons/arrowD.svg
     - Assets/Icons/white.svg
     - Assets/Icons/green.svg
     - Assets/Icons/Call.svg

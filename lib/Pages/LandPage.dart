@@ -1,51 +1,213 @@
 import 'package:barista/Pages/details.dart';
 import 'package:barista/Pages/mappage.dart';
 import 'package:barista/Pages/orderpage.dart';
+import 'package:barista/Widgets/ButtonIcon.dart';
 import 'package:barista/Widgets/ContainerBox.dart';
-import 'package:barista/Widgets/Containerl%20copy.dart';
 import 'package:barista/Widgets/DetailContainer.dart';
 import 'package:barista/Widgets/button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LandPage extends StatelessWidget {
-  const LandPage({Key? key});
+  const LandPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Color main = const Color.fromRGBO(255, 255, 255, 1);
     Color change = const Color.fromRGBO(198, 124, 78, 1);
-    Color border = Color.fromRGBO(234, 234, 234, 1);
-    Color body = Color.fromRGBO(249, 249, 249, 1);
-    Color text = Color.fromRGBO(155, 155, 155, 1);
-    Color button = Color.fromRGBO(255, 240, 240, 1);
-    Color M = Color.fromRGBO(255, 245, 238, 1);
-    Color bor = Color.fromRGBO(222, 222, 222, 1);
-    Color bordM = Color.fromRGBO(198, 124, 78, 1);
-    Color text2 = Color.fromRGBO(255, 255, 255, 1);
-    Color button2 = Color.fromRGBO(198, 124, 78, 1);
-    Color bottombord = Color.fromRGBO(241, 241, 241, 1);
+    Color border = const Color.fromRGBO(234, 234, 234, 1);
+    Color body = const Color.fromRGBO(249, 249, 249, 1);
+    Color text = const Color.fromRGBO(155, 155, 155, 1);
+    Color button = const Color.fromRGBO(255, 240, 240, 1);
+    Color M = const Color.fromRGBO(255, 245, 238, 1);
+    Color bor = const Color.fromRGBO(222, 222, 222, 1);
+    Color bordM = const Color.fromRGBO(198, 124, 78, 1);
+    Color text2 = const Color.fromRGBO(255, 255, 255, 1);
+    Color button2 = const Color.fromRGBO(198, 124, 78, 1);
+    Color bottombord = const Color.fromRGBO(241, 241, 241, 1);
     double lineWidth = 20.0;
 
-    final LinearGradient gradient = LinearGradient(
+    final LinearGradient gradient = const LinearGradient(
       colors: [
-        Color.fromRGBO(19, 19, 19, 1),
         Color.fromRGBO(49, 49, 49, 1),
+        Color.fromRGBO(19, 19, 19, 1),
       ],
-      stops: [0, 0],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
     );
 
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-
-         backgroundColor: button2,
+      body: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              gradient: gradient,
+            ),
+            padding: EdgeInsets.only(
+              top: MediaQuery.of(context).padding.top,
+              left: 16,
+              right: 16,
+            ),
+            child: Column(
+              children: [
+                Container(
+                  height: kToolbarHeight,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            'Location',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontFamily: "Sora",
+                            ),
+                          ),
+                          Row(
+                            children: [
+                              Text(
+                                'Blizen, Tanjugubali',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 17,
+                                  fontFamily: "Sora",
+                                ),
+                              ),
+                              SizedBox(width: 4),
+                              SvgPicture.asset(
+                                'Assets/Icons/arrowD.svg',
+                                color: Colors.white,
+                                width: 16,
+                                height: 16,
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.rectangle,
+                          borderRadius: BorderRadius.circular(8),
+                          image: DecorationImage(
+                            image: AssetImage('Assets/Images/profile.png'), // Replace with the actual image path
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: Row(
+                    children: [
+                      SvgPicture.asset(
+                        'Assets/Icons/search.svg', // Replace with the actual icon path
+                        width: 24,
+                        height: 24,
+                      ),
+                      SizedBox(width: 8), // Add some spacing between the icon and the text field
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            filled: true,
+                            fillColor: Color.fromRGBO(49, 49, 49, 1),
+                            hintText: 'Search coffee', hintStyle: TextStyle(color: Color.fromRGBO(19, 19, 19, 1),),
+                            border: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(8),
+                              borderSide: BorderSide.none,
+                            ),
+                          ),
+                        ),
+                      ),
+                      ButtonIco(
+                        backgroundColor: button2,
+                        svgPath: 'Assets/Icons/prop.svg',
+                        width: 44,
+                        height: 44,
+                        radius: 12,
+                        onTap: () {},
+                      ), // Replace with your custom button widget
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Container(
+              width: 315,
+              height: 200, // Adjust the height as needed
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(16),
+                image: DecorationImage(
+                  image: AssetImage('Assets/Images/home.png'), // Replace with the actual image path
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: 5, width: 10),
+          Row(
+            children: [
+              AppButton(
+                backgroundColor: change,
+                text: 'Cappuccino',
+                width: 131,
+                height: 40,
+                textColor: Colors.white,
+                fsize: 14,
+                ffamily: 'Sora',
+                fweight: '400',
+                icon: null,
+                radius: 15,
+                onTap: () {},
+                border: bor,
+              ),
+              SizedBox(width: 3),
+              AppButton(
+                backgroundColor: Color.fromRGBO(243, 243, 243, 1),
+                text: 'Machiato',
+                width: 131,
+                height: 40,
+                textColor: Colors.black,
+                fsize: 14,
+                ffamily: 'Sora',
+                fweight: '400',
+                icon: null,
+                radius: 15,
+                onTap: () {},
+                border: Color.fromRGBO(243, 243, 243, 1),
+              ),
+              SizedBox(width: 3),
+              AppButton(
+                backgroundColor: Color.fromRGBO(243, 243, 243, 1),
+                text: 'Latte',
+                width: 131,
+                height: 40,
+                border: Color.fromRGBO(243, 243, 243, 1),
+                textColor: Colors.black,
+                fsize: 16,
+                ffamily: 'Sora',
+                fweight: '400',
+                icon: null,
+                radius: 15,
+                onTap: () {},
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+        ],
       ),
-           
-       bottomNavigationBar: ClipRRect(
-        borderRadius: BorderRadius.only(
+      bottomNavigationBar: ClipRRect(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(20.0),
           topRight: Radius.circular(20.0),
         ),
@@ -95,7 +257,7 @@ class LandPage extends StatelessWidget {
                     'Assets/Icons/bell.svg',
                   ),
                   onPressed: () {
-                     Navigator.push(
+                    Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => MapPage()),
                     );
