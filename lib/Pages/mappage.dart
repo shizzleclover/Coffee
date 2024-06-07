@@ -18,11 +18,11 @@ class MapPage extends StatelessWidget {
   final Color back = Color.fromRGBO(240, 240, 240, 1);
   final double lineWidth = 20.0;
   final double buttonSpacing = 16.0;
-  final double textPadding = 8.0; // Padding for text to align with image
-  final double bottomBarHeight = 358.0; // Editable height of the bottom bar
+  final double textPadding = 8.0; 
+  final double bottomBarHeight = 358.0; 
   final double bottomBarPadding = 20.0;
-  final double containerWidth = 350.0; // Editable width of the container
-  final double containerHeight = 107.0; // Editable height of the container
+  final double containerWidth = 350.0;  
+  final double containerHeight = 107.0;  
   final double fabSize = 24.0;
 
   @override
@@ -54,7 +54,7 @@ class MapPage extends StatelessWidget {
               backgroundColor: body,
               onPressed: () {},
               child: SvgPicture.asset(
-                'Assets/Icons/gps.svg', // Adjust with your SVG path
+                'Assets/Icons/gps.svg', 
                 width: fabSize,
                 height: fabSize,
               ),
@@ -86,12 +86,11 @@ class MapPage extends StatelessWidget {
             Column(
               children: [
                 SvgPicture.asset(
-                  'Assets/Icons/Indicator.svg', // Replace with your SVG path
+                  'Assets/Icons/Indicator.svg',  
                  
                   
                 ),
-                SizedBox(height: 10), // Space between SVG and text
-                Text(
+                SizedBox(height: 10),                  Text(
                   '10 minutes left',
                   style: TextStyle(
                     color: Colors.black,
@@ -110,30 +109,29 @@ class MapPage extends StatelessWidget {
                     fontWeight: FontWeight.w400,
                   ),
                 ),
-                SizedBox(height: 10), // Space between text and SVG
+                SizedBox(height: 10),  
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.center, // Center the row
+                  mainAxisAlignment: MainAxisAlignment.center,  
                   children: [
                     SvgPicture.asset(
-                      'Assets/Icons/green.svg', // Adjust with your SVG path
+                      'Assets/Icons/green.svg',  
                     ),
                     SizedBox(width: 10),
                     SvgPicture.asset(
-                      'Assets/Icons/green.svg', // Adjust with your SVG path
+                      'Assets/Icons/green.svg',  
                     ),
                     SizedBox(width: 10),
                     SvgPicture.asset(
-                      'Assets/Icons/green.svg', // Adjust with your SVG path
+                      'Assets/Icons/green.svg',  
                     ),
                     SizedBox(width: 10),
                     SvgPicture.asset(
-                      'Assets/Icons/white.svg', // Adjust with your SVG path
-                    ),
+                      'Assets/Icons/white.svg',                     ),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: 20), // Space between text and "Delivered your order" container
+            SizedBox(height: 20),  
             GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -168,7 +166,7 @@ class MapPage extends StatelessWidget {
                               fontWeight: FontWeight.w700,
                             ),
                           ),
-                          SizedBox(height: 4), // Adding space between header and description
+                          SizedBox(height: 4),  
                           Text(
                             'We deliver your goods to you in the shortest possible time.',
                             style: TextStyle(
@@ -201,7 +199,7 @@ class MapPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       image: DecorationImage(
-                        image: AssetImage('Assets/Images/Image.png'), // Replace with your image path
+                        image: AssetImage('Assets/Images/Image.png'),  
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -225,8 +223,7 @@ class MapPage extends StatelessWidget {
                                   fontWeight: FontWeight.w700,
                                 ),
                               ),
-                              SizedBox(height: 4), // Adding space between header and description
-                              Text(
+                              SizedBox(height: 4),                               Text(
                                 'Personal Courier',
                                 style: TextStyle(
                                   color: txt,

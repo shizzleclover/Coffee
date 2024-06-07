@@ -5,15 +5,14 @@ class SpecialContainer extends StatefulWidget {
   final double width;
    
   final double height;
-  // final Widget child;
+  
 
 
   const SpecialContainer({
     Key? key,
     required this.width,
     required this.height,
-    //  required this.child, 
-
+     
   }) : super(key: key);
 
   @override
@@ -62,7 +61,7 @@ class _SpecialContainerState extends State<SpecialContainer> {
             fit: BoxFit.cover,
           ),
         ),
-        // child: widget.child,
+        
       ),
     );
   }

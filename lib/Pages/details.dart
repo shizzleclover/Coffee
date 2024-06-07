@@ -25,9 +25,9 @@ class DetailPage extends StatelessWidget {
     Color button2 = Color.fromRGBO(198, 124, 78, 1);
     Color bottombord = Color.fromRGBO(241, 241, 241, 1);
     double lineWidth = 20.0;
-    double buttonSpacing = 16.0; // Editable space between buttons and text
-    double textPadding = 8.0; // Padding for text to align with image
-    double bottomBarHeight = 200.0; // Editable height of the bottom bar
+    double buttonSpacing = 16.0;  
+    double textPadding = 8.0;  
+    double bottomBarHeight = 200.0;  
     double bottomBarPadding = 20.0;
 
     return Scaffold(
@@ -88,7 +88,7 @@ class DetailPage extends StatelessWidget {
                 ImageContainer(width: 450, height: 300),
                 SizedBox(height: 20),
                 Container(
-                  width: 450, // Aligns the container with the image width
+                  width: 450, 
                   child: Padding(
                     padding: EdgeInsets.symmetric(horizontal: textPadding),
                     child: Column(
@@ -319,8 +319,6 @@ class DetailPage extends StatelessWidget {
                     icon: null,
                     radius: 16,
                     onTap: () {
-
-
  Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => OrderPage()),

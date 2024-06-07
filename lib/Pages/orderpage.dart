@@ -21,12 +21,12 @@ class OrderPage extends StatelessWidget {
     Color bottombord = Color.fromRGBO(241, 241, 241, 1);
     Color back = Color.fromRGBO(240, 240, 240, 1);
     double lineWidth = 20.0;
-    double buttonSpacing = 16.0; // Editable space between buttons and text
-    double textPadding = 8.0; // Padding for text to align with image
-    double bottomBarHeight = 140.0; // Editable height of the bottom bar
+    double buttonSpacing = 16.0;  
+    double textPadding = 8.0;  
+    double bottomBarHeight = 140.0;  
     double bottomBarPadding = 20.0;
-    double containerWidth = 350.0; // Editable width of the container
-    double containerHeight = 60.0; // Editable height of the container
+    double containerWidth = 350.0;  
+    double containerHeight = 60.0;  
 
     return Scaffold(
       backgroundColor: body,
@@ -76,7 +76,7 @@ class OrderPage extends StatelessWidget {
                   ),
                   width: containerWidth,
                   height: containerHeight,
-                  padding: EdgeInsets.all(5.5), // Adding padding inside the container
+                  padding: EdgeInsets.all(5.5),  
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -107,7 +107,7 @@ class OrderPage extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 Container(
-                  width: containerWidth, // Align elements with the container width
+                  width: containerWidth,  
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [

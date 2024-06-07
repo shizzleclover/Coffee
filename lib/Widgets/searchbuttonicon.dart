@@ -36,8 +36,8 @@ class ButtonIcons extends StatelessWidget {
         child: Center(
           child: SvgPicture.asset(
             'Assets/Icons/flirt.svg',
-            width: width * 0.5, // Adjust the size of the SVG if necessary
-            height: height * 0.5, // Adjust the size of the SVG if necessary
+            width: width * 0.5,  
+            height: height * 0.5, 
           ),
         ),
       ),

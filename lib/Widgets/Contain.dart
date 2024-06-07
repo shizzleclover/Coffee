@@ -48,7 +48,7 @@ class _RegularContainerState extends State<RegularContainer> {
         width: _width,
         height: _height,
         decoration: BoxDecoration(
-          color: widget.background, // Use widget.background here
+          color: widget.background,  
           borderRadius: BorderRadius.circular(14),
         ),
       ),
