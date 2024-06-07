@@ -73,6 +73,8 @@ flutter:
 
     - Assets/Icons/GoogleLogo.svg
     - Assets/Icons/Hea.svg
+    - Assets/Icons/fill.svg
+    - Assets/Icons/flirt.svg
     - Assets/Icons/Indicator.svg
     - Assets/Icons/search.svg
     - Assets/Icons/filter.svg

@@ -5,6 +5,7 @@ import 'package:barista/Widgets/ButtonIcon.dart';
 import 'package:barista/Widgets/ContainerBox.dart';
 import 'package:barista/Widgets/DetailContainer.dart';
 import 'package:barista/Widgets/button.dart';
+import 'package:barista/Widgets/searchbuttonicon.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -25,6 +26,7 @@ class LandPage extends StatelessWidget {
     Color text2 = const Color.fromRGBO(255, 255, 255, 1);
     Color button2 = const Color.fromRGBO(198, 124, 78, 1);
     Color bottombord = const Color.fromRGBO(241, 241, 241, 1);
+    Color cunt = const Color.fromRGBO(47, 75, 78, 1);
     double lineWidth = 20.0;
 
     final LinearGradient gradient = const LinearGradient(
@@ -103,37 +105,61 @@ class LandPage extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 10,),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
-                  child: Row(
+                  child: Stack(
+                    alignment: Alignment.center,
                     children: [
-                      SvgPicture.asset(
-                        'Assets/Icons/search.svg', // Replace with the actual icon path
-                        width: 24,
-                        height: 24,
+                      Container(
+                        height: 53,
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(49, 49, 49, 1),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
                       ),
-                      SizedBox(width: 8), // Add some spacing between the icon and the text field
-                      Expanded(
-                        child: TextField(
-                          decoration: InputDecoration(
-                            filled: true,
-                            fillColor: Color.fromRGBO(49, 49, 49, 1),
-                            hintText: 'Search coffee', hintStyle: TextStyle(color: Color.fromRGBO(19, 19, 19, 1),),
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(8),
-                              borderSide: BorderSide.none,
+                      Positioned(
+                        left: 20,
+                        child: SvgPicture.asset(
+                          'Assets/Icons/search.svg', // Replace with the actual icon path
+                          width: 24,
+                          height: 24,
+                        ),
+                      ),
+                      Positioned.fill(
+                        left: 50,
+                        right: 50,
+                        child: Align(
+                          alignment: Alignment.center,
+                          child: TextField(
+                            textAlign: TextAlign.center,
+                            decoration: InputDecoration(
+                              filled: true,
+                              fillColor: Color.fromRGBO(49, 49, 49, 1),
+                              hintText: 'Search coffee',
+                              hintStyle: TextStyle(
+                                fontFamily: 'Sora',
+                                color:  text,
+                              ),
+                              border: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(8),
+                                borderSide: BorderSide.none,
+                              ),
                             ),
                           ),
                         ),
                       ),
-                      ButtonIco(
-                        backgroundColor: button2,
-                        svgPath: 'Assets/Icons/prop.svg',
-                        width: 44,
-                        height: 44,
-                        radius: 12,
-                        onTap: () {},
-                      ), // Replace with your custom button widget
+                      Positioned(
+                        right: 4,
+                        child: ButtonIcons(
+                          backgroundColor: button2,
+                          svgPath: 'Assets/Icons/fill.svg',
+                          width: 47,
+                          height: 47,
+                          radius: 12,
+                          onTap: () {},
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -143,8 +169,8 @@ class LandPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Container(
-              width: 315,
-              height: 200, // Adjust the height as needed
+              width: 370,
+              height: 180,  
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 image: DecorationImage(
@@ -154,54 +180,56 @@ class LandPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 5, width: 10),
-          Row(
-            children: [
-              AppButton(
-                backgroundColor: change,
-                text: 'Cappuccino',
-                width: 131,
-                height: 40,
-                textColor: Colors.white,
-                fsize: 14,
-                ffamily: 'Sora',
-                fweight: '400',
-                icon: null,
-                radius: 15,
-                onTap: () {},
-                border: bor,
-              ),
-              SizedBox(width: 3),
-              AppButton(
-                backgroundColor: Color.fromRGBO(243, 243, 243, 1),
-                text: 'Machiato',
-                width: 131,
-                height: 40,
-                textColor: Colors.black,
-                fsize: 14,
-                ffamily: 'Sora',
-                fweight: '400',
-                icon: null,
-                radius: 15,
-                onTap: () {},
-                border: Color.fromRGBO(243, 243, 243, 1),
-              ),
-              SizedBox(width: 3),
-              AppButton(
-                backgroundColor: Color.fromRGBO(243, 243, 243, 1),
-                text: 'Latte',
-                width: 131,
-                height: 40,
-                border: Color.fromRGBO(243, 243, 243, 1),
-                textColor: Colors.black,
-                fsize: 16,
-                ffamily: 'Sora',
-                fweight: '400',
-                icon: null,
-                radius: 15,
-                onTap: () {},
-              ),
-            ],
+          SizedBox(height: 5),
+          Container(
+            width: 370,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                AppButton(
+                  backgroundColor: change,
+                  text: 'Cappuccino',
+                  width: 120,
+                  height: 40,
+                  textColor: Colors.white,
+                  fsize: 14,
+                  ffamily: 'Sora',
+                  fweight: '400',
+                  icon: null,
+                  radius: 15,
+                  onTap: () {},
+                  border: bor,
+                ),
+                AppButton(
+                  backgroundColor: Color.fromRGBO(243, 243, 243, 1),
+                  text: 'Machiato',
+                  width: 120,
+                  height: 40,
+                  textColor: cunt,
+                  fsize: 14,
+                  ffamily: 'Sora',
+                  fweight: '400',
+                  icon: null,
+                  radius: 15,
+                  onTap: () {},
+                  border: Color.fromRGBO(243, 243, 243, 1),
+                ),
+                AppButton(
+                  backgroundColor: Color.fromRGBO(243, 243, 243, 1),
+                  text: 'Latte',
+                  width: 120,
+                  height: 40,
+                  border: Color.fromRGBO(243, 243, 243, 1),
+                  textColor: cunt,
+                  fsize: 16,
+                  ffamily: 'Sora',
+                  fweight: '400',
+                  icon: null,
+                  radius: 15,
+                  onTap: () {},
+                ),
+              ],
+            ),
           ),
           SizedBox(height: 10),
         ],
