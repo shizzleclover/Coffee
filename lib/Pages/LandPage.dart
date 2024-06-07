@@ -253,7 +253,7 @@ class LandPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                height: 150,
+                                height: 170,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
                                   image: DecorationImage(
@@ -317,7 +317,7 @@ class LandPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                height: 150,
+                                height: 170,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
                                   image: DecorationImage(
@@ -378,7 +378,7 @@ class LandPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 40),
                 Container(
                   width: 370,
                   child: Row(
@@ -391,7 +391,7 @@ class LandPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                height: 150,
+                                height: 170,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
                                   image: DecorationImage(
@@ -455,7 +455,7 @@ class LandPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
-                                height: 150,
+                                height: 170,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(12),
                                   image: DecorationImage(
@@ -464,7 +464,7 @@ class LandPage extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 8),
+                              
                               Text(
                                 'Latte',
                                 style: TextStyle(
@@ -481,7 +481,7 @@ class LandPage extends StatelessWidget {
                                   color: text,
                                 ),
                               ),
-                              SizedBox(height: 8),
+                              SizedBox(height: 15),
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                 children: [
